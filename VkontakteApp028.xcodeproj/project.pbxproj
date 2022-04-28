@@ -29,7 +29,7 @@
 		65BE762D26C9963D00DD28E8 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE762C26C9963D00DD28E8 /* Community.swift */; };
 		65BE763026C9983600DD28E8 /* FriendsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE762F26C9983600DD28E8 /* FriendsStorage.swift */; };
 		65BE763226C998E300DD28E8 /* CommunityStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE763126C998E300DD28E8 /* CommunityStorage.swift */; };
-		65BFFD5C281AD0B400089736 /* MySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFFD5B281AD0B400089736 /* MySession.swift */; };
+		65BFFD5E281AD85B00089736 /* MySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFFD5D281AD85B00089736 /* MySession.swift */; };
 		65DC60C626EF77B40005D47C /* AnimationThirdPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC60C526EF77B40005D47C /* AnimationThirdPoint.swift */; };
 		65DC60C826EF7B600005D47C /* AllFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC60C726EF7B600005D47C /* AllFriendsViewController.swift */; };
 		65DC60CA26EF84F40005D47C /* AllFriendsAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC60C926EF84F40005D47C /* AllFriendsAvatarView.swift */; };
@@ -68,7 +68,7 @@
 		65BE762C26C9963D00DD28E8 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		65BE762F26C9983600DD28E8 /* FriendsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStorage.swift; sourceTree = "<group>"; };
 		65BE763126C998E300DD28E8 /* CommunityStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityStorage.swift; sourceTree = "<group>"; };
-		65BFFD5B281AD0B400089736 /* MySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySession.swift; sourceTree = "<group>"; };
+		65BFFD5D281AD85B00089736 /* MySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySession.swift; sourceTree = "<group>"; };
 		65DC60C526EF77B40005D47C /* AnimationThirdPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationThirdPoint.swift; sourceTree = "<group>"; };
 		65DC60C726EF7B600005D47C /* AllFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFriendsViewController.swift; sourceTree = "<group>"; };
 		65DC60C926EF84F40005D47C /* AllFriendsAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFriendsAvatarView.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		65BFFD59281ACC5900089736 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				65BFFD5B281AD0B400089736 /* MySession.swift */,
+				65BFFD5D281AD85B00089736 /* MySession.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				65DC60C626EF77B40005D47C /* AnimationThirdPoint.swift in Sources */,
 				65A5F12226ECEA2C00192AA9 /* CustomPushAnimator.swift in Sources */,
 				6571554026C1B92700816D66 /* SceneDelegate.swift in Sources */,
-				65BFFD5C281AD0B400089736 /* MySession.swift in Sources */,
+				65BFFD5E281AD85B00089736 /* MySession.swift in Sources */,
 				65BE763226C998E300DD28E8 /* CommunityStorage.swift in Sources */,
 				65E5150D26D3967200FEDF8E /* AvatarView.swift in Sources */,
 				653B84CF26D3C19000D4D8B3 /* LikeControl.swift in Sources */,
