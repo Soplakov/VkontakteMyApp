@@ -118,6 +118,7 @@
 		6571553C26C1B92700816D66 /* VkontakteApp028 */ = {
 			isa = PBXGroup;
 			children = (
+				65BFFD59281ACC5900089736 /* Network */,
 				65A5F11B26ECE83100192AA9 /* Animation */,
 				6571553D26C1B92700816D66 /* AppDelegate.swift */,
 				6571553F26C1B92700816D66 /* SceneDelegate.swift */,
@@ -175,6 +176,13 @@
 				65BE763126C998E300DD28E8 /* CommunityStorage.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		65BFFD59281ACC5900089736 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		65E5150B26D393A200FEDF8E /* Custom */ = {
