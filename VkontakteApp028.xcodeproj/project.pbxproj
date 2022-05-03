@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65014BC1282128F40061D063 /* LoginVKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65014BC0282128F40061D063 /* LoginVKViewController.swift */; };
 		653B84CF26D3C19000D4D8B3 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653B84CE26D3C19000D4D8B3 /* LikeControl.swift */; };
 		6571553E26C1B92700816D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571553D26C1B92700816D66 /* AppDelegate.swift */; };
 		6571554026C1B92700816D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6571553F26C1B92700816D66 /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65014BC0282128F40061D063 /* LoginVKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVKViewController.swift; sourceTree = "<group>"; };
 		653B84CE26D3C19000D4D8B3 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		6571553A26C1B92700816D66 /* VkontakteApp028.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkontakteApp028.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6571553D26C1B92700816D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				6571553D26C1B92700816D66 /* AppDelegate.swift */,
 				6571553F26C1B92700816D66 /* SceneDelegate.swift */,
 				6579418E26C318630080AB65 /* LoginFormController.swift */,
+				65014BC0282128F40061D063 /* LoginVKViewController.swift */,
 				65E5150B26D393A200FEDF8E /* Custom */,
 				65BE762E26C997B900DD28E8 /* Repository */,
 				65BE762726C989AB00DD28E8 /* Model */,
@@ -308,6 +311,7 @@
 				65BE762926C98FED00DD28E8 /* MyCommunityTableViewCell.swift in Sources */,
 				65BE762D26C9963D00DD28E8 /* Community.swift in Sources */,
 				65A5F12026ECE90C00192AA9 /* CustomNavigationController.swift in Sources */,
+				65014BC1282128F40061D063 /* LoginVKViewController.swift in Sources */,
 				65BE762B26C994C000DD28E8 /* Friends.swift in Sources */,
 				65A5F12626ECF6B100192AA9 /* CustomInteractiveTransition.swift in Sources */,
 				6581025D26CC440A006415F7 /* AllCommunityViewController.swift in Sources */,
