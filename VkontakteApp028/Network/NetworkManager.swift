@@ -10,8 +10,8 @@ import Foundation
 // Запросы к Vkontakte API
 class NetworkManager {
     
-    // Метод для запроса друзей пользователя
-    static func getFriends() {
+    // Метод для запроса друзей пользователя из сети
+    static func getFriends(controller: FriendsViewController) {
         var urlConstructor = URLComponents()
         urlConstructor.scheme = "https"
         urlConstructor.host = "api.vk.com"
@@ -29,6 +29,7 @@ class NetworkManager {
             do {
                 let friends = try JSONDecoder().decode(FriendsResponseVK.self, from: data!)
                 
+                controller.setFriends(friends: friends.response.items)
             } catch (let error) {
                 print(error)
             }
