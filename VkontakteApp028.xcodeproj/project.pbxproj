@@ -44,6 +44,8 @@
 		65F6970226DE9FEE007A59C3 /* FriendsPhotoCollectionCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F6970126DE9FEE007A59C3 /* FriendsPhotoCollectionCustomLayout.swift */; };
 		65FD1F562821622500E4E763 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD1F552821622500E4E763 /* NetworkManager.swift */; };
 		65FD1F5A2821663B00E4E763 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD1F592821663B00E4E763 /* Users.swift */; };
+		65FD1F5C28216D1D00E4E763 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD1F5B28216D1D00E4E763 /* Groups.swift */; };
+		65FD1F5E28216D4300E4E763 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD1F5D28216D4300E4E763 /* Photos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		65F6970126DE9FEE007A59C3 /* FriendsPhotoCollectionCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCollectionCustomLayout.swift; sourceTree = "<group>"; };
 		65FD1F552821622500E4E763 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		65FD1F592821663B00E4E763 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		65FD1F5B28216D1D00E4E763 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		65FD1F5D28216D4300E4E763 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				65FD1F592821663B00E4E763 /* Users.swift */,
+				65FD1F5B28216D1D00E4E763 /* Groups.swift */,
+				65FD1F5D28216D4300E4E763 /* Photos.swift */,
 			);
 			path = ModelNetwork;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FD1F5E28216D4300E4E763 /* Photos.swift in Sources */,
 				65A6716D26E92C0200D1EC6E /* BigPhotoFriendsViewController.swift in Sources */,
 				65F55BFD26C45B7E00D66902 /* FriendsViewController.swift in Sources */,
 				65A6716F26E933AE00D1EC6E /* BigPhotoFriendsView.swift in Sources */,
@@ -323,6 +330,7 @@
 				6581025F26CC4AD0006415F7 /* AllCommunityTableViewCell.swift in Sources */,
 				65E769CC26CE72BF00F2494B /* FriendsPhotoViewCell.swift in Sources */,
 				65BE762926C98FED00DD28E8 /* MyCommunityTableViewCell.swift in Sources */,
+				65FD1F5C28216D1D00E4E763 /* Groups.swift in Sources */,
 				65BE762D26C9963D00DD28E8 /* Community.swift in Sources */,
 				65A5F12026ECE90C00192AA9 /* CustomNavigationController.swift in Sources */,
 				65FD1F562821622500E4E763 /* NetworkManager.swift in Sources */,
