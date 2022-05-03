@@ -10,26 +10,29 @@ import WebKit
 
 class LoginVKViewController: UIViewController {
 
-    //ID приложения Vkontakte - 7961872
+    // ID приложения Vkontakte - 7961872
     
     var session = MySession.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Отслеживание переходов между страницами с помощью Delegate
         webView.navigationDelegate = self
+        // Запуск метода авторизации VK
         loadAuthorizeVK()
         
     }
     
     @IBOutlet weak var webView: WKWebView!
     
-    
+    // Метод для авторизации Vkontakte
     func loadAuthorizeVK() {
-        //Конструктор для URL
+        // Конструктор для URL
         var urlConstructor = URLComponents()
         urlConstructor.scheme = "https"
         urlConstructor.host = "oauth.vk.com"
         urlConstructor.path = "/authorize"
+        // Параметры для запроса
         urlConstructor.queryItems = [
             URLQueryItem(name: "client_id", value: "7961872"),
             URLQueryItem(name: "display", value: "mobile"),
@@ -38,7 +41,7 @@ class LoginVKViewController: UIViewController {
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.131")
         ]
-        //Запрос
+        // Запрос
         let request = URLRequest(url: urlConstructor.url!)
 
         webView.load(request)
@@ -47,6 +50,7 @@ class LoginVKViewController: UIViewController {
 }
 
 extension LoginVKViewController: WKNavigationDelegate {
+    // Метод, который перехватывает ответы сервера при переходе
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         //Проверка получение данных из URL
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment  else {
@@ -64,11 +68,11 @@ extension LoginVKViewController: WKNavigationDelegate {
                 return dict
             }
         
-        //Выводим в консоль token и userId
+        // Выводим в консоль token и userId
         print("Данные текущей сессии - \(params)")
         if let token = params["access_token"],
            let userId = params["user_id"] {
-            //Сохранение token и userId в Singlton
+            // Сохранение token и userId в Singlton
             session.userId = Int(userId)!
             session.token = token
             
