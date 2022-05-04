@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Модель для парсинга JSON - группы пользователя
+// Модель для парсинга JSON - Группы пользователя
 
 class GroupsResponseVK: Decodable {
     let response: GroupsResponse
