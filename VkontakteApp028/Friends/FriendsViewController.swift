@@ -68,7 +68,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        friends.count  // numberOfRowsInSection(кол-во строк в  каждой секции по умолчанию 1) соответсвует кол-ву друзей(count)
+        friends.count  // numberOfRowsInSection(кол-во строк в каждой секции по умолчанию 1) соответсвует кол-ву друзей(count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
