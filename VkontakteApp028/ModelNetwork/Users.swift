@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 // Модель для парсинга JSON - Друзья пользователя
 
@@ -16,9 +17,9 @@ class FriendsResponse: Decodable {
     let count: Int
     let items: [UserItems]
 }
-class UserItems: Decodable {
-    let id: Int
-    let first_name: String
-    let last_name: String
-    let photo_100: String?
+class UserItems: Object, Decodable {
+    @objc dynamic var id: Int
+    @objc dynamic var first_name: String
+    @objc dynamic var last_name: String
+    @objc dynamic var photo_100: String?
 }

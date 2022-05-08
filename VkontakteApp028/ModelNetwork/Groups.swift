@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 // Модель для парсинга JSON - Группы пользователя
 
@@ -17,8 +18,8 @@ class GroupsResponse: Decodable {
     let items: [GroupsItems]
 }
 
-class GroupsItems: Decodable {
-    let description: String
-    let name: String
-    let photo_200: String?
+class GroupsItems: Object, Decodable {
+    @objc dynamic var description: String
+    @objc dynamic var name: String
+    @objc dynamic var photo_200: String?
 }
