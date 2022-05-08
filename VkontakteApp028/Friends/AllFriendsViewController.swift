@@ -17,7 +17,7 @@ class AllFriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let allFriends = FriendsStorage().allFiends
+        let allFriends = FriendsStorage.shared.allFiends
         firstLetters = getFirstLetters(allFriends)
         
         friendsSection = sortedForSection(allFriends, firstLetters: firstLetters)

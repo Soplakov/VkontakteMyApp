@@ -11,19 +11,27 @@ class MyCommunityViewController: UIViewController {
 
     @IBOutlet var tableViewCommunity: UITableView!
     
-    private var community: [CommunityModel] = []
-    
+    var community = [GroupsItems]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        community = CommunityStorage().myCommunity
-        //Заполнение ячеек таблицы с группами пользователя из репозитория
+        //community = CommunityStorage().myCommunity
+        // Заполнение ячеек таблицы с группами пользователя из репозитория
         tableViewCommunity.delegate = self
         tableViewCommunity.dataSource = self
+        NetworkManager.getGroups(controller: self)
+    }
+    
+    func setGroups(community:[GroupsItems]) {
+        DispatchQueue.main.async {
+            self.community = community
+            self.tableViewCommunity.reloadData()
+        }
     }
 }
 
+// Переопределение ячеек
 extension MyCommunityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         community.count
@@ -44,18 +52,19 @@ extension MyCommunityViewController: UITableViewDelegate, UITableViewDataSource 
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+}
 
     //Segue для добавления групп из  контроллера AllCommunity в контроллер MyCommunity
-    @IBAction func addCommunity(_ segue: UIStoryboardSegue) {
-        guard
-            let sourseController = segue.source as? AllCommunityViewController,
-            let indexSelectCell = sourseController.tableViewAllCommunity.indexPathForSelectedRow
-        else { return }
-        
-        let communitys = sourseController.allCommunity[indexSelectCell.row]
-        if !community.contains(where: {communitys.nameCommunity == $0.nameCommunity}) { community.append(communitys)
-            
-            tableViewCommunity.reloadData()
-        }
-    }
-}
+//    @IBAction func addCommunity(_ segue: UIStoryboardSegue) {
+//        guard
+//            let sourseController = segue.source as? AllCommunityViewController,
+//            let indexSelectCell = sourseController.tableViewAllCommunity.indexPathForSelectedRow
+//        else { return }
+//
+//        let communitys = sourseController.allCommunity[indexSelectCell.row]
+//        if !community.contains(where: {communitys.nameCommunity == $0.nameCommunity}) { community.append(communitys)
+//
+//            tableViewCommunity.reloadData()
+//        }
+//    }
+//}

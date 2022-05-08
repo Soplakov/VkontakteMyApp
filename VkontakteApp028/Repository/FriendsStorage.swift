@@ -9,10 +9,12 @@ import UIKit
 
 class FriendsStorage {
     
-    let myFriends: [FriendsModel]
-    let allFiends: [FriendsModel]
+    static let shared = FriendsStorage()
     
-    init() {
+    var myFriends: [FriendsModel]
+    var allFiends: [FriendsModel]
+    
+    private init() {
         myFriends = [FriendsModel(imageFriends: "wo_6", nameFriends: "Джеймс Хоулетт", photo: [PhotoModel(photoName: "wo_1", likeCount: 35, theLike: false),PhotoModel(photoName: "wo_2", likeCount: 6, theLike: false), PhotoModel(photoName: "wo_3", likeCount: 63, theLike: false), PhotoModel(photoName: "wo_4", likeCount: 23, theLike: false), PhotoModel(photoName: "wo_5", likeCount: 15, theLike: false), PhotoModel(photoName: "wo_6", likeCount: 19, theLike: false), PhotoModel(photoName: "wo_7", likeCount: 48, theLike: false), PhotoModel(photoName: "wo_8", likeCount: 3, theLike: false), PhotoModel(photoName: "wo_9", likeCount: 4, theLike: false), PhotoModel(photoName: "wo_10", likeCount: 1, theLike: false), PhotoModel(photoName: "wo_11", likeCount: 42, theLike: false)]),
                      FriendsModel(imageFriends: "sp_6", nameFriends: "Питер Паркер", photo: [PhotoModel(photoName: "sp_1",likeCount: 57, theLike: false), PhotoModel(photoName: "sp_2", likeCount: 69, theLike: false), PhotoModel(photoName: "sp_3", likeCount: 72, theLike: false), PhotoModel(photoName: "sp_4", likeCount: 80, theLike: false), PhotoModel(photoName: "sp_5", likeCount: 53, theLike: false), PhotoModel(photoName: "sp_6", likeCount: 79, theLike: false), PhotoModel(photoName: "sp_7", likeCount: 55, theLike: false)])
         ]
