@@ -6,20 +6,40 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     
-    private var friends: [FriendsModel] = []
+    var friends = [UserItems]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        friends = FriendsStorage().myFriends
         
         tableView.delegate = self
         tableView.dataSource = self
+        NetworkManager.getFriends(controller: self)
+    }
+    
+    func setFriends(friends: [UserItems]) {
+        DispatchQueue.main.async {
+            self.friends = friends
+            self.tableView.reloadData()
+        }
+        
+        // Сохранение друзей пользователя в Realm
+        func saveFriendsData(_ dataFriends: [UserItems]) {
+            do {
+                let realm = try Realm()
+                //print(realm.configuration.fileURL)
+                realm.beginWrite()
+                realm.add(dataFriends)
+                try realm.commitWrite()
+            } catch {
+                print(error)
+            }
+        }
     }
     
     // Переход с Friends контроллера на FriendsPhotoViewController(CollectionViev-галлерея с фото друзей)
@@ -29,7 +49,7 @@ class FriendsViewController: UIViewController {
                 let destinationController = segue.destination as? FriendsPhotoViewController,
                 let indexSelectCell = tableView.indexPathForSelectedRow?.row
             else { return }
-            let selectFriend = friends[indexSelectCell]
+            let selectFriend = FriendsStorage.shared.myFriends[indexSelectCell]
             // Передаем название
             destinationController.title = selectFriend.nameFriends
             // Передаем фото
@@ -47,8 +67,8 @@ class FriendsViewController: UIViewController {
         }
         let friend = sourceController.friendsSection[indexPaths.section][indexPaths.row]
         
-        if !friends.contains(where: {$0.nameFriends == friend.nameFriends}) {
-            friends.append(friend)
+        if !FriendsStorage.shared.myFriends.contains(where: {$0.nameFriends == friend.nameFriends}) {
+            FriendsStorage.shared.myFriends.append(friend)
             tableView.reloadData()
         }
     }
@@ -62,7 +82,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        friends.count  // numberOfRowsInSection(кол-во строк в  каждой секции по умолчанию 1) соответсвует кол-ву друзей(count)
+        friends.count  // numberOfRowsInSection(кол-во строк в каждой секции по умолчанию 1) соответсвует кол-ву друзей(count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
