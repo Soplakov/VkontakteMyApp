@@ -16,7 +16,8 @@ class MyCommunityTableViewCell: UITableViewCell {
     @IBOutlet private var labelCommunity: UILabel!
     
     func configure(community: GroupsItems) {
-        labelCommunity.text = community.description + " " + community.name
+        // описание группы community.description + " " +
+        labelCommunity.text = community.name
         if community.photo_200 == nil {
             return
         }

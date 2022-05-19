@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MyCommunityViewController: UIViewController {
 
@@ -29,6 +30,21 @@ class MyCommunityViewController: UIViewController {
             self.tableViewCommunity.reloadData()
         }
     }
+}
+
+// Сохранение групп пользователя в Realm
+func saveCommunityData(_ dataCommunity: [GroupsItems]) {
+   do {
+       let realm = try Realm()
+       //print(realm.configuration.fileURL)
+       realm.beginWrite()
+       realm.add(dataCommunity)
+       // Начинаем запись в хранилище
+       try realm.commitWrite()
+   } catch {
+       // если произошла ошибка, выводим ее в консоль
+       print(error)
+   }
 }
 
 // Переопределение ячеек

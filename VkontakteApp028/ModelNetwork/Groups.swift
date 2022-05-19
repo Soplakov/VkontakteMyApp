@@ -19,7 +19,8 @@ class GroupsResponse: Decodable {
 }
 
 class GroupsItems: Object, Decodable {
-    @objc dynamic var description: String
+    // Убрал описание из ячейки с названием
+    //@objc dynamic var description: String
     @objc dynamic var name: String
     @objc dynamic var photo_200: String?
 }
