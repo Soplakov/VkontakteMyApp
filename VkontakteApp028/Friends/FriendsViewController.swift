@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FriendsViewController: UIViewController {
 
@@ -25,6 +26,19 @@ class FriendsViewController: UIViewController {
         DispatchQueue.main.async {
             self.friends = friends
             self.tableView.reloadData()
+        }
+        
+        // Сохранение друзей пользователя в Realm
+        func saveFriendsData(_ dataFriends: [UserItems]) {
+            do {
+                let realm = try Realm()
+                //print(realm.configuration.fileURL)
+                realm.beginWrite()
+                realm.add(dataFriends)
+                try realm.commitWrite()
+            } catch {
+                print(error)
+            }
         }
     }
     
