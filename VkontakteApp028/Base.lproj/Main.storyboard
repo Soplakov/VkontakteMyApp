@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="2640" y="506.87203791469193"/>
         </scene>
-        <!--View Controller-->
+        <!--News View Controller-->
         <scene sceneID="y7M-ew-bdf">
             <objects>
-                <viewController id="bMn-fc-rxl" sceneMemberID="viewController">
+                <viewController id="bMn-fc-rxl" customClass="NewsViewController" customModule="VkontakteApp028" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUM-mX-NlV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
                                 <rect key="frame" x="0.0" y="56" width="390" height="705"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="opi-r2-yyr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="opi-r2-yyr" customClass="NewsProfileTableViewCell" customModule="VkontakteApp028" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="opi-r2-yyr" id="GfE-hm-Uch">
@@ -240,8 +240,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsAvatar" destination="G2j-0C-Mg2" id="4RE-wK-LNb"/>
+                                            <outlet property="newsName" destination="dTR-Ua-eWy" id="G4l-wY-vJj"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="wTr-FY-8Gg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="wTr-FY-8Gg" customClass="NewsPostTextTableViewCell" customModule="VkontakteApp028" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110.66666603088379" width="390" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wTr-FY-8Gg" id="BdZ-2Y-XDi">
@@ -259,8 +263,11 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsPostText" destination="5Hm-ug-06o" id="UsX-mK-JL7"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="316" id="6ZI-aK-cXs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="316" id="6ZI-aK-cXs" customClass="NewsPhotoTableViewCell" customModule="VkontakteApp028" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="199.66666603088379" width="390" height="316"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ZI-aK-cXs" id="KAs-bA-NIA">
@@ -273,8 +280,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsPostPhoto" destination="z8O-Rn-JeD" id="4wa-ek-aKq"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0Eq-JI-f82">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0Eq-JI-f82" customClass="StatisticTableViewCell" customModule="VkontakteApp028" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="515.66666603088379" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Eq-JI-f82" id="Edx-Cc-eIB">
@@ -327,6 +337,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsCommentCount" destination="CAP-o4-C4J" id="Hm8-xX-Taf"/>
+                                            <outlet property="newsLikeCount" destination="Uv7-H4-c4f" id="zOu-WI-Rmk"/>
+                                            <outlet property="newsRepostCount" destination="eCC-jS-hvN" id="uU2-9h-2AP"/>
+                                            <outlet property="newsViewCount" destination="8kd-pR-x4f" id="TBt-T8-oH1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -341,6 +357,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b7I-7Y-zc4"/>
+                    <connections>
+                        <outlet property="tableViewNews" destination="n3B-my-mHK" id="YNL-jC-sex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXN-D6-iaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
